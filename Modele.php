@@ -11,6 +11,6 @@ function getBillets() {
 
 function getBdd() {
 	$bdd = new PDO('mysql:host=localhost;dbname=miseenplacemvc;charset=utf8',
-			'ts2', 'ts2');
+			'ts2', 'ts2', array(PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION));
 	return $bdd;
 }
